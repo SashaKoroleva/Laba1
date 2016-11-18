@@ -19,6 +19,9 @@ public class Main {
         s = in.nextLine();
         Food a = null;
 
+        if (s.equals("Сыр")) {
+            a = new Cheese("Сыр");
+        }
         if (s.equals("Яблоко большое")) {
             a = new Apple("Яблоко", "большое");
         }
@@ -34,6 +37,8 @@ public class Main {
         if (s.equals("Мороженое с карамельным сиропом")) {
             a = new IceCream("Мороженое", "карамельный");
         }
+
+        myBreakfast.outputRecount(a);
 
         for(int i=0; i<myBreakfast.getMyList().size(); i++){
             myBreakfast.getMyList().get(i).consume();

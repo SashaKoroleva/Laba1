@@ -12,9 +12,7 @@ import varB7.Food;
 
 import javax.xml.bind.SchemaOutputResolver;
 
-/**
- * Created by sasha_koroleva on 23.10.2016.
- */
+
 
 public class Breakfast {
 
@@ -25,7 +23,12 @@ public class Breakfast {
     public Breakfast(String[] args) {
 
         myList = new ArrayList(0);
-        for(int i=0; i< args.length;i++){
+
+        for(int i=0; i < args.length; i++){
+
+            if (args[i].equals("Сыр")) {
+                myList.add(new Cheese("Сыр") );
+            }
             if (args[i].equals("Яблоко большое")) {
                 myList.add(new Apple("Яблоко", "большое"));
             }
